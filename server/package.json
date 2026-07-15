@@ -1,0 +1,16 @@
+{
+  "name": "@ai-scraper/server",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outfile dist/index.js",
+    "start": "bun run dist/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "hono": "^4.7.11"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

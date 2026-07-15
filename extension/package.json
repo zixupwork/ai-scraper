@@ -1,0 +1,11 @@
+{
+  "name": "@ai-scraper/extension",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bun build src/background.ts src/content.ts src/popup/popup.ts --outdir dist --target browser --minify"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.325",
+    "typescript": "^5.8.3"
+  }
+}

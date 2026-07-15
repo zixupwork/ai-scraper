@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Scraper</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 360px;
+      min-height: 200px;
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      background: #0f0f10;
+      color: #e4e4e7;
+    }
+    header {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid #27272a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    header h1 { font-size: 14px; font-weight: 600; }
+    header .badge {
+      margin-left: auto;
+      background: #27272a;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #a1a1aa;
+    }
+    #list { padding: 8px 0; max-height: 460px; overflow-y: auto; }
+    .item {
+      padding: 10px 16px;
+      border-bottom: 1px solid #18181b;
+      cursor: default;
+    }
+    .item:hover { background: #18181b; }
+    .item .url {
+      font-size: 11px;
+      color: #71717a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 4px;
+    }
+    .item .summary { line-height: 1.5; }
+    .item .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .tag {
+      background: #27272a;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 11px;
+      color: #a1a1aa;
+    }
+    .item .delete {
+      float: right;
+      cursor: pointer;
+      color: #52525b;
+      font-size: 16px;
+      line-height: 1;
+      margin-left: 8px;
+    }
+    .item .delete:hover { color: #ef4444; }
+    #empty {
+      padding: 40px 16px;
+      text-align: center;
+      color: #52525b;
+      font-size: 13px;
+    }
+    .server-hint {
+      padding: 8px 16px;
+      background: #1c1c1f;
+      font-size: 11px;
+      color: #71717a;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Scraper</h1>
+    <span class="badge" id="count">0 saved</span>
+  </header>
+  <div id="list"></div>
+  <div class="server-hint">Server: localhost:3579 &nbsp;·&nbsp; Select text → right-click → Extract with AI</div>
+  <script type="module" src="../../dist/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "ai-scraper",
+  "version": "0.1.0",
+  "workspaces": ["server", "extension"],
+  "scripts": {
+    "dev": "bun run --cwd server dev",
+    "build": "bun run --cwd extension build && bun run --cwd server build"
+  }
+}
